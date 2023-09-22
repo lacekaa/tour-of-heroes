@@ -11,11 +11,17 @@ import { HEROES } from '../mock-heroes';
 })
 
 export class HeroesComponent {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  selectedHero?: Hero;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+
+//  Hero: Hero = {
+//   id: 1,
+// name: 'Windstorm'
+// };
 
   heroes = HEROES;
+  protected readonly onselect = onselect;
 }
 
