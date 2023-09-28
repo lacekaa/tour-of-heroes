@@ -2,6 +2,17 @@
 
 }
 
+ /*removing dots of list */
+ul {
+  list-style-type: none;
+}
+
+
+button {
+  margin: 5px; /* or whatever you like */
+}
+
+
 
 /* Dropdown Button */
 .hero-id-button, .hero-name-button{
@@ -12,6 +23,12 @@
   outline: none;
   margin-right: -10px;
   border-radius: 5px;
+}
+
+/*set length for Hero-name-buttons to be equal*/
+.hero-name-button{
+  width: 18%;
+  text-align: left;
 }
 
 .hero-id-button{
