@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes';
-
+import {Component} from '@angular/core';
+import {Hero} from '../hero';
+import {HeroService} from '../hero.service';
 
 
 @Component({
@@ -12,6 +11,7 @@ import { HEROES } from '../mock-heroes';
 
 export class HeroesComponent {
   selectedHero?: Hero;
+
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
@@ -21,7 +21,7 @@ export class HeroesComponent {
 // name: 'Windstorm'
 // };
 
-  heroes = HEROES;
+  heroes: Hero[] = [];
   protected readonly onselect = onselect;
 }
 
