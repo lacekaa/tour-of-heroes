@@ -2,6 +2,7 @@
 h1 {
   margin-bottom: 0;
 }
+
 nav a {
   padding: 1rem;
   text-decoration: none;
@@ -10,12 +11,16 @@ nav a {
   background-color: #e8e8e8;
   color: #3d3d3d;
   border-radius: 4px;
+
+  /*adding myself*/
+  margin: 5px;
 }
 
 nav a:hover {
   color: white;
   background-color: #42545C;
 }
+
 nav a:active {
   background-color: black;
 }
