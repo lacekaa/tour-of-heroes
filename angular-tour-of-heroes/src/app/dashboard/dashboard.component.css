@@ -13,14 +13,19 @@ div a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: #e8e8e8;
-  color: #3d3d3d;
-  border-radius: 4px;
+  background-color: #42545C;
+  color: white;
+  border-radius: 0px;
 }
 
 div a:hover {
-  background-color: #42545C;
+  background-color: black;
   color: white;
 }
+
+.head-line{
+  text-align: center;
+}
+
 
 

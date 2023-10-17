@@ -8,37 +8,29 @@
 !-->
 
 
-<button class="hero-id-button">Hero id</button>
-<button class="hero-name-button">Hero name</button>
+<!--<button class="hero-id-button">Hero id</button>-->
+<!--<button class="hero-name-button">Hero name</button>-->
 
 
-<h2>My Heroes</h2>
-<div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
-
+<h2 class="head-line">My Heroes</h2>
+<div class="search-div" style="display: flex; flex-direction: row">
+  <label style="display: flex; flex: 0.25; " class="hero-label" for="new-hero">Hero name: </label>
+  <input class="hero-label-search" id="new-hero" #heroName />
   <!-- (click) passes input value to add() and then clears the input -->
   <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
 </div>
+
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <div style="grid-template-columns: 400px">
-      <a routerLink="/detail/{{hero.id}}">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    <div style="display: flex; flex-direction: row">
+      <a routerLink="/detail/{{hero.id}}" style="display: flex; flex: 0.3;">
+        <span class="badge">{{hero.id}}</span>
+        <span class="hero-name" style="flex: 1;">{{hero.name}}</span>
       </a>
-      <button type="button" class="delete" title="delete hero"
-              (click)="delete(hero)">x</button>
-<!--      -->
-<!--      <button class="hero-id-button" type="button" (click)="onSelect(hero)"-->
-<!--              [class.selected]="hero === selectedHero">-->
-<!--        <span class="badge">{{hero.id}}</span>-->
-<!--      </button>-->
-<!--      <button style="grid-template-columns: 100px 100px" class="hero-name-button" type="button" (click)="onSelect(hero)"-->
-<!--              [class.selected]="hero === selectedHero">-->
-<!--        <span class="hero-name">{{hero.name}}</span>-->
-<!--      </button>-->
+      <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
     </div>
 
 
