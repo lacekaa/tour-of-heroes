@@ -14,18 +14,44 @@ button {
 }
 
 .search-div {
-  width: 60px;
+
 }
 
 .hero-label-search {
-  margin: 25px;
+  border-bottom-color: black;
+  border-top-color: black;
+
+
 }
 
 .hero-label {
-  background-color: grey;
+  background-color: #1c333f;
   color: white;
-  margin: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
+
+
+.search-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add-button {
+  background-color: #1c333f;
+  color: white;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.hero-label, .hero-label-search, .add-button {
+  flex: 1;
+  padding: 5px; /* Adjust padding as needed */
+}
+
 
 .delete {
   padding: 1rem;
@@ -99,6 +125,15 @@ button {
 .hero-name-button:hover {
   background-color: black;
   color: white;
+}
+
+.add-button:hover{
+  background-color: black;
+}
+
+.hero-label:hover{
+  background-color: black;
+  cursor: pointer;
 }
 
 .hero-name:hover {
