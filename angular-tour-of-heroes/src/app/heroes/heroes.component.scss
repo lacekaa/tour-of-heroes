@@ -1,0 +1,242 @@
+/*removing dots of list */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+//button {
+//  /*margin: 5px; !* or whatever you like *!*/
+//}
+
+//.search-div {
+//
+//}
+
+//.hero-label-search {
+//  border-bottom-color: black;
+//  border-top-color: black;
+//
+//
+//}
+
+//.hero-label {
+//  background-color: #1c333f;
+//  color: white;
+//  display: flex;
+//  align-items: center;
+//  border-bottom-left-radius: 4px;
+//  border-top-left-radius: 4px;
+//}
+
+
+//.search-div {
+//  display: flex;
+//  flex-direction: row;
+//  align-items: center;
+//}
+//
+//.add-button {
+//  background-color: #1c333f;
+//  color: white;
+//  border-bottom-left-radius: 0px;
+//  border-top-left-radius: 0px;
+//}
+//
+//.hero-label, .hero-label-search, .add-button {
+//  flex: 1;
+//  padding: 5px; /* Adjust padding as needed */
+//}
+
+
+.delete {
+  padding: 1rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.badge {
+  padding: 1rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #42545C;
+  color: white;
+  border-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.hero-name {
+  padding: 1rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+}
+
+
+/* Dropdown Button */
+.hero-id-button, .hero-name-button {
+  color: black;
+  font-size: 16px;
+  padding-left: -10px;
+  border: none;
+  outline: none;
+  margin-right: -10px;
+  border-radius: 5px;
+}
+
+/*set length for Hero-name-buttons to be equal*/
+.hero-name-button {
+  width: 18%;
+  text-align: left;
+}
+
+.hero-id-button {
+  background-color: #1c333f;
+  color: white;
+}
+
+.hero-name-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: black;
+}
+
+.hero-label:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.hero-name:hover {
+  color: white;
+  background-color: darkgray;
+}
+
+.hero-name:active {
+  background-color: black;
+}
+
+.delete:active {
+  background-color: darkred;
+}
+
+$border-size: 4px;
+$primary-background: #1c333f;
+$secondary-background: lightgray;
+$primary-text-color: white;
+$secondary-text-color: black;
+.t-search-div {
+  //background-color: lightblue;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  //width: ;
+  //alle unter t-search div mit label werden getargeted
+  //font em rest, REM in verhaeltnis
+  label {
+    background-color: $primary-background;
+    color: $primary-text-color;
+    //starting upperleft clockwise
+    border-radius: $border-size 0 0 $border-size;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    //flex: 1;
+  }
+
+  input {
+    //may only be altered in align-items when style:flex applied
+    border: 2px solid $primary-background;
+    flex: 1;
+    background-color: $secondary-background;
+    color: $secondary-text-color;
+    cursor: pointer;
+    //0 top bottom, 1rem left right
+    padding: 0 1rem;
+    width: auto;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  button {
+    //flex: 1;
+    border-radius: 0 $border-size $border-size 0;
+    background-color: $primary-background;
+    color: $primary-text-color;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+  }
+}
+
+
+.hero-list-element-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 300px;
+  background-color: blue;
+  height: 3rem;
+  padding: 5px;
+
+  a {
+    flex: 1;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+
+    .badget {
+      background-color: pink;
+      margin: 0;
+      width: 50px;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .hero-namet {
+      flex: 1;
+      background-color: yellow;
+      margin: 0;
+    }
+  }
+
+
+  .deletet {
+    background-color: red;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+  }
+}

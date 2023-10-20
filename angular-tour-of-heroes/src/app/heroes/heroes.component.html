@@ -13,16 +13,22 @@
 
 
 <h2 class="head-line">My Heroes</h2>
-<div class="search-div" style="max-width: 400px; display: flex; flex-direction: row">
-  <label class="hero-label" for="new-hero">Hero name: </label>
-  <input class="hero-label-search" id="new-hero" #heroName />
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value='';">
+<!--<div class="search-div" style="max-width: 400px; display: flex; flex-direction: row">-->
+<!--  <label class="hero-label" for="new-hero">Hero name: </label>-->
+<!--  <input class="hero-label-search" id="new-hero" #heroName/>-->
+<!--  &lt;!&ndash; (click) passes input value to add() and then clears the input &ndash;&gt;-->
+<!--  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value='';">-->
+<!--    Add hero-->
+<!--  </button>-->
+<!--</div>-->
+
+<div class="t-search-div">
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName/>
+  <button type="button" (click)="add(heroName.value); heroName.value='';">
     Add hero
   </button>
 </div>
-
-
 
 
 <ul class="heroes">
@@ -36,6 +42,19 @@
     </div>
 
 
+  </li>
+
+</ul>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <div class="hero-list-element-div">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badget">{{hero.id}}</span>
+        <span class="hero-namet">{{hero.name}}</span>
+      </a>
+      <button type="button" class="deletet" title="delete hero" (click)="delete(hero)">x</button>
+    </div>
 
 
   </li>
