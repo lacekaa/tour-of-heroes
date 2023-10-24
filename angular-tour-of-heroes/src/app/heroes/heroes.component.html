@@ -30,30 +30,14 @@
   </button>
 </div>
 
-
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <div style="display: flex; flex-direction: row">
-      <a routerLink="/detail/{{hero.id}}" style="display: flex; flex: 0.3;">
-        <span class="badge">{{hero.id}}</span>
-        <span class="hero-name" style="flex: 1;">{{hero.name}}</span>
-      </a>
-      <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
-    </div>
-
-
-  </li>
-
-</ul>
-
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <div class="hero-list-element-div">
       <a routerLink="/detail/{{hero.id}}">
-        <span class="badget">{{hero.id}}</span>
-        <span class="hero-namet">{{hero.name}}</span>
+        <span class="badge">{{hero.id}}</span>
+        <span class="hero-name">{{hero.name}}</span>
       </a>
-      <button type="button" class="deletet" title="delete hero" (click)="delete(hero)">x</button>
+      <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
     </div>
 
 
